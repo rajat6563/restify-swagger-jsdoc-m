@@ -1,6 +1,6 @@
 {
   "name": "restify-swagger-jsdoc-m",
-  "version": "3.2.4",
+  "version": "1.0.0",
   "description": "Create Swagger documentation page based on jsdoc",
   "main": "js/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RemyJeancolas/restify-swagger-jsdoc.git"
+    "url": "git+https://github.com/rajat6563/restify-swagger-jsdoc-m.git"
   },
   "keywords": [
     "restify",
@@ -23,9 +23,9 @@
     "api"
   ],
   "author": {
-    "name": "Rémy Jeancolas",
-    "url": "https://github.com/RemyJeancolas",
-    "email": "remy.jeancolas@illogeek.eu"
+    "name": "Rajat Yadav",
+    "url": "https://github.com/rajat6563",
+    "email": "rajat6563@gmail.com"
   },
   "contributors": [],
   "license": "MIT",
