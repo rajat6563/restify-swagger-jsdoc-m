@@ -1,6 +1,6 @@
 {
   "name": "restify-swagger-jsdoc-m",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Create Swagger documentation page based on jsdoc",
   "main": "js/index.js",
   "scripts": {

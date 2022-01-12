@@ -62,7 +62,8 @@ function createSwaggerSpec(options) {
 }
 function loadIndexPage(options, req, publicPath, content) {
     const isReqSecure = options.forceSecure || req.isSecure();
-    const jsonFileUrl = `${isReqSecure ? 'https' : 'http'}://${req.headers.host}${publicPath}/swagger.json`;
+    const hostPath = options.host ? options.host : req.headers.host;
+    const jsonFileUrl = `${isReqSecure ? 'https' : 'http'}://${hostPath}${publicPath}/swagger.json`;
     let localContent = content.toString().replace('url: "https://petstore.swagger.io/v2/swagger.json"', `url: "${jsonFileUrl}"`);
     if (options.validatorUrl === null || typeof options.validatorUrl === 'string') {
         localContent = addSwaggerUiConfig(localContent, 'validatorUrl', options.validatorUrl);
