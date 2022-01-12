@@ -1,6 +1,6 @@
 {
   "name": "restify-swagger-jsdoc-m",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Create Swagger documentation page based on jsdoc",
   "main": "js/index.js",
   "scripts": {
@@ -30,9 +30,9 @@
   "contributors": [],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RemyJeancolas/restify-swagger-jsdoc/issues"
+    "url": "https://github.com/rajat6563/restify-swagger-jsdoc-m/issues"
   },
-  "homepage": "https://github.com/RemyJeancolas/restify-swagger-jsdoc#readme",
+  "homepage": "https://github.com/rajat6563/restify-swagger-jsdoc-m#readme",
   "dependencies": {
     "mime-types": "^2.1.27",
     "restify-errors": "^6.1.1",

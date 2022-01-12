@@ -1,10 +1,5 @@
-# restify-swagger-jsdoc
+# restify-swagger-jsdoc-m
 Create Swagger documentation page based on jsdoc
-
-[![Build Status](https://travis-ci.org/RemyJeancolas/restify-swagger-jsdoc.svg?branch=master)](https://travis-ci.org/RemyJeancolas/restify-swagger-jsdoc)
-[![Coverage Status](https://coveralls.io/repos/github/RemyJeancolas/restify-swagger-jsdoc/badge.svg?branch=master)](https://coveralls.io/github/RemyJeancolas/restify-swagger-jsdoc?branch=master)
-[![npm Version](https://img.shields.io/npm/v/restify-swagger-jsdoc.svg)](https://www.npmjs.com/package/restify-swagger-jsdoc)
-[![npm Downloads](https://img.shields.io/npm/dm/restify-swagger-jsdoc.svg)](https://www.npmjs.com/package/restify-swagger-jsdoc)
 
 ## Installation
 
@@ -16,7 +11,7 @@ npm install restify-swagger-jsdoc@^1
 ```
 Else you can use the following command:
 ```bash
-npm install restify-swagger-jsdoc
+npm install restify-swagger-jsdoc-m
 ```
 
 ## Initialization
@@ -26,7 +21,7 @@ npm install restify-swagger-jsdoc
 To initialize the swagger JSDoc page, simply add these lines to the file that loads your restify server :
 
 ```javascript
-var restifySwaggerJsdoc = require('restify-swagger-jsdoc');
+var restifySwaggerJsdoc = require('restify-swagger-jsdoc-m');
 restifySwaggerJsdoc.createSwaggerPage({
     title: 'API documentation', // Page title
     version: '1.0.0', // Server version

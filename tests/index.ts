@@ -5,7 +5,7 @@ import * as fs from 'fs';
 import * as mime from 'mime-types';
 import * as swaggerDoc from '../src/index';
 
-describe('restify-swagger-jsdoc', () => {
+describe('restify-swagger-jsdoc-m', () => {
   const swaggerUiPath = `${path.dirname(require.resolve('swagger-ui-dist'))}${path.sep}`;
   const sandbox = sinon.createSandbox();
   const server: any = {get: Function};
