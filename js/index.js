@@ -87,7 +87,7 @@ function createSpecRoute(server, publicPath, swaggerSpec) {
 }
 function createHomeRoute(server, publicPath) {
     server.get(publicPath, (req, res, next) => {
-        res.setHeader('Location', `${publicPath}/index.html`);
+        res.setHeader('Location', `.${publicPath}/index.html`);
         res.send(302);
         return next();
     });
