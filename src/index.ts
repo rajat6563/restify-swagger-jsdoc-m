@@ -97,11 +97,35 @@ function loadIndexPage(options: SwaggerPageOptions, req: Request, publicPath: st
   const isReqSecure = options.forceSecure || req.isSecure();
   const hostPath = options.host ? options.host : req.headers.host;
   const jsonFileUrl = `${isReqSecure ? 'https' : 'http'}://${hostPath}${publicPath}/swagger.json`;
-  console.log("jsonFileUrl.......",jsonFileUrl);
   let localContent = content.toString().replace(
     'url: "https://petstore.swagger.io/v2/swagger.json"',
     `url: "${jsonFileUrl}"`
   );
+
+  // custom JS added for manually loading swagger ui
+  if (content.toString().indexOf(jsonFileUrl) == -1) {
+    localContent += `<script>
+    window.onload = function() {
+      // Begin Swagger UI call region (RjYv)
+      const ui = SwaggerUIBundle({
+        url: "${jsonFileUrl}",
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        plugins: [
+          SwaggerUIBundle.plugins.DownloadUrl
+        ],
+        layout: "StandaloneLayout"
+      });
+      // End Swagger UI call region
+
+      window.ui = ui;
+    };
+  </script>`
+  }
 
   if (options.validatorUrl === null || typeof options.validatorUrl === 'string') {
     localContent = addSwaggerUiConfig(localContent, 'validatorUrl', options.validatorUrl);
